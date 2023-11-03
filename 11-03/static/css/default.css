@@ -1,0 +1,74 @@
+body{
+  background-color: rgb(212, 212, 203);
+  margin:0;
+}
+#wrap{
+  width:1200px;
+  border-collapse: collapse;
+  margin:20px auto;
+
+}
+/*
+ #wrap tr td{
+  border:1px solid #000;
+}
+*/
+#header{
+  border-radius: 10px;
+  height:80px;
+  width :100%;
+  background:#fff;
+  font-weight: 800;
+  font-size: 19px;
+}
+
+#slideWrap{
+  width: 600px;
+  height: 700px;
+}
+#drinkWrap{
+  width: 600px;
+  height: 350px;
+}
+#eventWrap{
+  height: 350px;
+}
+.menuItem{
+  /* width: 100px; */
+  padding-left:50px;
+}
+.slide{
+  width: 100%;
+}
+.leftMove, .rightMove{
+  width: 50px;
+  font-size: 30px;
+  text-align: center;
+  color: brown;
+}
+.leftMove i:hover , .rightMove i:hover{
+  cursor:pointer;
+}
+.slideImage{
+  width: 500px;
+}
+.slideImage img{width:100%;}
+
+.drinkMenu{
+  list-style:none;
+  font-size:20px;
+  font-weight:800;
+}
+
+.drinkMenu li{
+  height: 35px;
+  border-bottom:5px solid #ffe;
+  width: 150px;
+  cursor:pointer;
+}
+
+#eventWrap{
+  height:350px;
+}
+
+
