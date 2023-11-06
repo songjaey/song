@@ -1,0 +1,109 @@
+<!-- div1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #box1{
+      width:400px;
+      height:300px;
+      border:1px solid red;
+      background-color: seagreen;
+      border-radius: 20px;
+      margin-top:100px;
+      padding: 20px 100px;
+    }
+    #box2{
+      width:200px;
+      height:100px;
+      background: mediumorchid;
+      margin-top:-220px;
+      margin-left:200px;
+    }
+    #box3{
+    box-sizing: border-box; /* 안쪽 여백, 테두리선에 의해 크기가 변하지 않는다. */
+     width:500px;
+    /* height:400px; */
+     background: tomato;
+     padding: 150px 175px;
+    }
+    #box4{
+      width:150px;
+      height:100px;
+      background: papayawhip;
+    }
+    #box5{
+      width:600px;
+      /*height:50px;*/
+      background: yellow;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 20px 0px;
+      /*vertical-align: middle;*/
+    }
+    #box6{
+      width:500px;
+      background:hotpink;
+      text-align: right;
+      box-sizing: border-box;
+      padding-right:10px;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="box1"></div>
+  <div id="box2"></div>
+  <div id="box3">
+    <div id="box4"></div>
+    <h3> 공고중인 보호동물</h3>
+  </div>
+
+  <br> <br>
+  <div id="box5">
+    입양 가능! 새로운 가족을 기다리고 있어요
+  </div>
+
+  <div id="box6">
+    반려동물 사랑으로 입양하세요
+  </div>
+  <!--
+    태그에 적용할 수 있는 여백
+    안쪽 여백 - padding
+    바깥쪽 여백 - margin
+
+    padding은 안쪽여백을 생성한다.
+    padding으로 생성된 공간은 내부에서 사용불가(텍스트, 이미지 등)
+    div 영역 안에 특정 태그의 위치를 이동시키고 다른 공간에 텍스트나 이미지를
+    표현하고자 한다면 padding이 아닌margin으로 이동시켜야 한다.
+
+    padding은 안쪽에 사용할 수 없는 공간을 생성하는 것이다.
+    margin은 기본적으로 사용할 수 없는 바깥쪽 공간을 생성하는 것이기 때문에
+    div 영역 내부에 표시되는 내용에는 영향을 주지 않는다.
+
+    그러므로 형역 안쪽의 태그들의 위치를 설정 하기 위해서는padding을
+    영역의 화면에서 위치를 설정하기 위해서 margin을 이용한다.
+
+    div - division
+    div 태그를 이용하여 화면을 분할해서 사용할 수 있다.
+    메뉴 영역, 사이드 영역, 본문영역, 바닥 영역 등등
+    div가 가진 css속성은 단 하나 display:block; 이다.
+    block값은 면적을 의미.
+
+    공간 태그
+    p, h123456, div, iframe, 
+    header - 메뉴, 로고, 제목, 머리글
+    main - 페이지 내의 중심주제, 주요내용, 콘텐츠
+    section - 주제별, 카테고리별, 테마별
+    article - 기사, 블로그 전체 내용, 텍스트 중심의 글
+    footer - 바닥글, 페이지 하단에 정보표현
+    nav - 메뉴
+    aside - 좌측, 우측 사이드 공간
+    figure - 이미지, 다이어그램, 영상 등 독립적인 컨텐츠
+
+  -->
+</body>
+</html>

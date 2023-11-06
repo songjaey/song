@@ -1,0 +1,69 @@
+<!-- div2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #div1{
+      width:500px;
+      height:350px;
+      background:paleturquoise;
+      box-sizing: border-box;
+      padding-top:200px;
+    }
+    #div1Child1{
+      width:100px;
+      height:100px;
+      box-sizing: border-box;
+      background:red;
+      margin-left:250px;
+    }
+    #div1Child2{
+      width:100px;
+      height:100px;
+      box-sizing: border-box;
+      background:blue;
+      margin-left:100px;
+    }
+    #div2{
+      width:200px;
+    }
+    #div2 img{
+      width:80%;
+      opacity: 0.5;
+      transition: all 2s ease;
+    }
+    #div2 h2{
+      margin-top:-125px;
+    }
+    #div2:hover img{
+      opacity: 1;
+    }
+    #div3{
+      width:200px;
+      height:300px;
+      background: url(./static/images/photo3.png);
+      background-size:cover;
+      background-position: center; /* 배경 가운데가 나오도록 */
+      background-repeat:no-repeat; /* 패턴 적용이 안됨*/
+    }
+  </style>
+</head>
+<body>
+  <div id="div1">
+    <div id="div1Child1"><p style="color:white">child1</p></div>
+    <div id="div1Child2"><p style="color:white">child2</p></div>
+  </div>
+
+  <div id="div2">
+    <img src="./static/images/photo3.png" alt="커피">
+    <h2> 커피사진 </h2>
+  </div>
+
+  <div id="div3">
+
+  </div>
+</body>
+</html>
