@@ -48,6 +48,66 @@ body{
 .nav .menu:nth-child(5){
   left:600px;
 }
+#main{
+  position:relative;
+  width:100%;
+}
+.imgBox1{
+  margin: 0;
+}
+.imgBox2{
+  margin: 0;
+  position:relative;
+  left:300px;
+  bottom: 200px;
+}
+.imgBox3{
+  position:relative;
+  bottom:200px;
+}
+.imgBox4{
+  position:relative;
+  bottom:200px;
+}
+.imgBox5{
+  position:relative;
+  bottom:400px;
+  left:300px;
+}
+.imgBox6{
+  position:relative;
+  bottom:600px;
+  left:600px;
+}
+/* .imgBox1{
+  margin: 0 auto;
+}
+.imgBox2{
+  position:absolute;
+  left : 350px;
+  bottom : 100px;
+}
+.imgBox3{
+  position:absolute;
+  top : 300px;
+}
+.imgBox4{
+  position:absolute;
+  top : 510px;
+}
+.imgBox5{
+  position:absolute;
+  top : 510px;
+  left : 350px;
+}
+.imgBox6{
+  position:absolute;
+  top : 510px;
+  left : 700px;
+} */
+
+
+
 /* 
 동일한 태그명을 가진 하위 태그를 선택하는방법
 .nav .menu:nth-child(3)
