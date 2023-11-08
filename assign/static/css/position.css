@@ -1,0 +1,90 @@
+body{
+  margin:0;
+}
+
+#wrap{
+  width:1200px;
+  margin:0 auto;
+  position:relative;
+}
+
+.newsHeader{
+  width:100%;
+  height: 200px;
+  padding:10px 0;
+}
+.newsHeaderTop{
+  /* background: blue; */
+  position:relative;
+}
+.navTop .headerTopMenu:hover{
+  background-color: yellow;
+}
+.newsHeaderLogo{
+  width:50px; height:50px;
+  position:absolute;
+}
+
+.headerTopMenu{
+  width:70px;
+  position:absolute;
+  background: blue;
+  color : white;
+}
+.navTop .headerTopMenu:nth-child(1){
+  left:50px;
+}
+.navTop .headerTopMenu:nth-child(2){
+  left:100px;
+}.navTop .headerTopMenu:nth-child(3){
+  left:160px;
+}
+.navTop .headerTopMenu:nth-child(4){
+  left:210px;
+}
+.navTop .headerTopMenu:nth-child(5){
+  left:900px;
+}
+.newsHeaderBottom{
+  margin-top:30px;
+  /* background: gray; */
+  position:sticky;
+  top: 0;
+  z-index: 100;
+}
+.navBottom{
+  width:1200px;
+  background: gray;
+  position:absolute;
+}
+/* .navBottom .headerBottomMenu:nth-child(2){
+  left:50px;
+}
+.navBottom .headerBottomMenu:nth-child(3){
+  left:100px;
+}
+.navBottom .headerBottomMenu:nth-child(4){
+  left:150px;
+}
+.navBottom .headerBottomMenu:nth-child(5){
+  left:220px;
+}
+.navBottom .headerBottomMenu:nth-child(6){
+  left:270px;
+}
+.navBottom .headerBottomMenu:nth-child(7){
+  left:320px;
+} */
+#main{
+  position:relative;
+  top : -100px;
+}
+
+#foot{
+  position:relative;
+  /* top : 100px; */
+  width:1200px;
+  padding:20px;
+  background:green;
+  color:white;
+}

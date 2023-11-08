@@ -1,0 +1,84 @@
+<!--div6.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    *{
+      margin:0; padding:0;
+    }
+    .study{
+      padding:10px 50px;
+    }
+    .tc{
+      padding-left:10px; 
+    }
+    .tag , .css{
+      width:500px;
+      display:inline-block;
+      padding:0 20px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="study">
+    <h3> 텍스트 태그와 css</h3>
+    <div class="tc">
+      <div class="tag">
+        <pre>
+          &lt b &gt 글씨 굵게 &lt /b &gt
+          &lt strong &gt 글씨 굴게(문장에서 강조용) &lt /strong &gt
+          &lt h1~6 &gt 글의 제목 &lt /h1 &gt
+          &lt p &gt 문단의 표현 &lt /p &gt
+          &lt br &gt 텍스트 줄바꿈
+          &lt blockquote &gt 텍스트의 인용문 &lt /blockquote &gt
+          &lt q &gt <q>텍스트의 인용문(줄바꿈 없음)</q> &lt /q &gt
+          &lt pre &gt /pre &gt <pre>텍스트에 서식지정(작성한 내용 그대로 표현)</pre> &lt /pre &gt
+          &lt figure &gt &lt /figure &gt <figure>독립적인 컨텐츠 표현</figure>
+          &lt hr &gt 장면전환, 구획내 주제변경, 문단 분리<hr> 
+          &lt i &gt &lt /i &gt <i>이탤릭체, 기울임</i>
+          &lt em &gt &lt /em &gt <em>텍스트의 강조, 중첩사용가능</em>
+          &lt mark &gt &lt /mark &gt <mark>텍스트 중요표시, 하이라이트 표시</mark>
+          &lt small &gt &lt /small &gt <small>덧붙이는 글, 저작권과 법률 같은 것</small>
+          &lt sup &gt &lt /sup &gt <sup>위 첨자</sup>
+          &lt sub &gt &lt /sub &gt <sub>아래 첨자</sub>
+          &lt del &gt &lt /del &gt <del>제거 텍스트</del>
+          &lt ins &gt &lt /ins &gt <ins>추가된 텍스트</ins>
+          &lt u &gt &lt /u &gt <u>텍스트에 밑줄</u>
+          &lt kdb &gt &lt /kdb &gt <kdb>Ctrl</kdb>+<kdb>R</kdb>
+        </pre>
+      </div>
+      <div class="css">
+        <pre>
+          font-size:20px; 글씨 크기를 20px로 설정
+          font-weight:700; 글씨 굵기 설정 100단위
+          font-family:'궁서'; 글꼴 설정
+          color:red; 글씨 색상
+          text-decoration:underline; 글씨장식 설정
+          text-transform:lowercase; 대소문자 변환
+          text-align:center; 텍스트 정렬(수평정렬)
+          letter-spacing:-2px;글자간격
+          line-height:30px; 행 높이
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="study">
+    <h3>공간(영역) 태그와 css</h3>
+    <div class="tc">
+      <div class="tag">
+        <pre>
+          &lt table &gt
+            &lt tr &gt
+              &lt table &gt
+        </pre>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
