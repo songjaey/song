@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./static/css/그림자.css">
+</head>
+<body>
+
+  <div id="box1"></div>
+  <div id="box2"></div>
+  <div id="box3">
+    <div class="image">
+      <img src="./static/images/nature.png" alt="자연경관">
+    </div>
+    <div class="detail">
+      <div class="cap">경관</div>
+        노을진 설경
+    </div>
+  </div>
+
+  <div id="box4">
+    <div class="image2">
+      <img src="./static/images/nature.png" alt="연습">
+    </div>
+    <div class="explan"> 
+      <div class="cap2">설명</div>  
+      배경화면 
+    </div>
+
+  </div>
+
+
+</body>
+</html>
+
+<!--
+  transform : 텍스트, 이미지, 도형, 영상 등에 변화를 주기 위한 속성
+              기울기(matrix), 크기(sclae), 회전(rotate), 이동 효과(translate)를 부여할 수 있다.
+
+  transition 사용할 때는 반드시 처음 상태값과 변화된 마지막 값을 알려줘야한다.
+             박스의 너비가 변화되는 과정을 transition으로 표현한다면
+             처음 너비가 얼마인지 값이 있어야하고, 변경된 너비값도 있어야한다.
+  transition : 상태의 변화를 동적으로 표현
+               지정한 시간에 맞춰 변화되는 과정을 표현
+
+  transition-delay 시간 설정 초단위(s), transition 효과가 시작하기 전에 대기 시간
+  transition-duraition 시간 설정 초단위(s) transition 효과가 진행되는 시간
+  transition-porperty 변화되는 css속성 지정(예, width, height, left, top, background 등)
+                      모든 css 속성 지정은 all이다.
+  transition-timing-function transition 효과가 속도 설정
+                             ease, ease-in, ease-out, ease-in-out, linear, step-end
+-->
