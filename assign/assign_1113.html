@@ -1,0 +1,30 @@
+<!--assign.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript">
+    //1번 문제
+    var width = parseInt( prompt("밑변을 입력하시오") );
+    var height = parseInt( prompt("높이를 입력하시오") );
+    area  = width * height;
+    document.writeln("사각형의 넓이는: " );
+    document.writeln( area +"<br>"); // document.writeln( width * height +"<br>");
+
+    //2번 문제
+    var red = 15;
+    var blue = 35;
+    var white = 0;
+    document.write("빨간컵: " + red + ", 파랑컵: " + blue + "<br>");
+    white = 20; //white = red;
+    red += white; // blue = red;
+    blue -= white; //
+    document.write("빨간컵: " + red + ", 파랑컵: " + blue);
+  </script>
+  <title>과제23-11-13</title>
+</head>
+<body>
+  
+</body>
+</html>

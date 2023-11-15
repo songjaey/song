@@ -1,0 +1,168 @@
+<!-- javascript_변수2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<script>
+// 데이터의 종류는 숫자데이터와 문자데이터
+// 숫자 데이터는 정수데이터, 실수데이터,
+// 문자데이터 - 자바스크립트에서는 문자열 데이터이다.
+// 문자열 데이터를 직접 작성할 시에는 반드시 " "(큰 따옴표), ' '(작은 따옴표) 감싸기
+// 변수는 데이터를 저장하고 사용하기 위해 생성한다.
+// 변수생성 방법
+//  1. 타입(범위)지정 - var, let, const
+//  2. 변수 이름 정하기 - 변수의 목적에 맞는 이름으로 카멜표기법, 스네이크표기법으로 작성.
+//     카멜 표기법 - iLoveHtml
+//     스네이크 표기법 - i_love_html
+//  3. 초디 데이터 저장 - 대입 연산자(=)로 변수에 처음에 저장할 데이터 저장
+//  4. var iLoveHtml = 0;
+
+  // var birthYear = parseInt( prompt("태어난 년도") );
+  // var age = 2023 - birthYear; // 나이 구하기
+  // document.write("태어난 년도 : " + birthYear + "년, 나이 : " + age + "살 <br>");
+
+  // parseInt() - 정수로 변환, parseFloat() - 실수로 변환
+
+  // var apple = 35; // /사과 35개
+  // var per = parseInt( prompt("인원수 ") );
+  // document.write("총인원 : "+per+"명, 1인당 사과 : " + parseInt(apple/per) +"개<br>");
+
+  // 원의 반지름을 입력하여 넓이를 구하여 출력하기
+  // 넓이 구하는 식 : 반지름 * 반지름 * 3.14
+
+  // var radius = parseFloat( prompt("반지름 : ") );
+  // document.write(" 원의 넓이는 : " + parseInt(radius*radius*3.14) + "이다");
+
+  // 국어, 수학 , 역사 3과목의 점수를 각각 입력 받기.
+
+  // var kor     = parseInt(prompt("국어 점수 입력"));
+  // var math    = parseInt(prompt("수학 점수 입력"));
+  // var his     = parseInt(prompt("역사 점수 입력"));
+  // var total   = kor + math + his;
+  // var average = parseInt( total / 3);
+  // document.write("총점은 : "+ total +" 평균은 : " + average);
+
+  // 연산자 
+  // 대입연산자 : = , 오른쪽의 데이터를 왼쪽에 저장
+  // 사칙연산자 : +, - , *, / 
+  // var num1 =24;
+  // var num2 = 7;
+  // document.write("+연산자 : " + (num1 + num2) );
+  // document.write("<br>-연산자 : " + (num1 - num2) );
+  // document.write("<br>*연산자 : " + (num1 * num2) );
+  // document.write("<br>/연산자 : " + (num1 / num2) );
+  // document.write("<br>%연산자 : " + (num1 % num2) );
+  // document.write("<br>**연산자 : " + (num1 ** num2) );
+
+  // 복합 대입 연산자: +=, -=ㅣ *=, /=, %=
+  // var a = 10;
+  // a += 5; // a = a + 5;
+  // // 증감 연산자 : ++, --
+
+  // var num1 = 20;
+  // num1++;
+  // console.log(num1);
+  // num1--;
+  // console.log(num1);
+
+  // // 비교 연산자 :  > , < , >= , <= , == , ===, !=
+  // console.log("> :" + (10>5) );
+  // console.log("< :" + (11<7) );
+  // console.log(">= :" + ( 20>=20) );
+  // console.log("<= :" + ( 24<=30) );
+  // console.log("== :" + (45 == 3) );
+  // console.log(" 2. == :" + ( 45 == "45") );
+  // console.log(" 3. === :" + ( 45 === "45") );
+  // console.log("같지않다 != " + ( 30 !=20 ) );
+
+  // 조건 연사자 (삼항 연산자)
+  // (조건식) ? 조건식이 참인 경우 내용 : 조건식이 거짓일 경우 내용;
+  // 
+  // ( 10 > 5 ) ? console.log("10이 5보다 크다") : console("10이 5보다 작다");
+
+  // T익스프레스 탑승 가능 키는 130 이상이다.
+  // var tall = parseInt( prompt("당신의 키는") );
+  // ( tall>= 130 ) ? console.log("탑승 가능") : console.log("탑승 불가능");
+
+  // 10과 8을 비교하여 두 수 중에서 큰 수를 출력하시오.
+  // var result = ( 10 > 8 ) ? 10 : 8;
+  // console.log(result);
+  
+  // var num1 = parseInt(prompt("첫번째 정수 입력") );
+  // var num2 = parseInt(prompt("두번째 정수 입력") );
+  // var result = ( num1 > num2 ) ? num1 : num2;
+  // console.log("두수 중 큰 수 : " + result);
+
+  // var num1 = parseInt(prompt("첫번째 정수 입력") );
+  // var num2 = parseInt(prompt("두번째 정수 입력") );
+  // var result = (num1 < num2) ? num1 : num2;
+  // console.log("두수 중 작은 수 : " + result);
+
+  // var birth = parseInt( prompt("생년월일 8자 입력") );
+  // var age = 2023 - parseInt( birth / 10000);
+  // var result = ( age >= 19) ? "성인" : "성인아님"
+  // console.log(result);
+
+  // var num1 = parseInt( prompt("10, 100, 50 중에 하나만 입력") );
+  // var result = ( num1 == 10 ) ? 10 : "아무것도";
+  // result = ( num1 == 100 ) ? 100 : result;
+  // result = ( num1 == 50  ) ?  50 : result;
+  // console.log ("당신은" + result + " 입력했습니다.")
+
+  // 국어, 영어 2과목 점수 입력받기
+
+  // var kor = parseInt( prompt("국어점수") );
+  // var eng = parseInt( prompt("영어점수") );
+  // var avg = (kor + eng) / 2;
+  // var result = ( avg >= 65 ) ? "통과" : "낙제";
+  
+  // console.log(result);
+
+  // 노트북을 사고싶다. 두대의 노트북을 장바구니에 담아 놓았다.
+  // 1번 노트북의 가격은 1290000원이다.
+  // 2번 노트북의 가격은 1854000원이다.
+  // 현재 내통장의 잔고를 입력하여
+  // 몇번째 노트북 구매가 가능한지 
+
+  // var bal = parseInt( prompt(" 잔액을 입력하세요 ") );
+  // var not1= 1290000; var not2 = 1854000;
+  // var tot = ( not1 + not2 );
+  // var result = ( bal >= not1 ) ? "1번째 가능" : "두개 전부 불가능";
+  // result = ( bal >= not2 ) ? "2번째 가능" : result;
+  // result = ( bal >=  tot ) ? "1+2 가능" : result;
+  // console.log("bal = "+ bal + " result = " + result);
+
+  // 세개의 정수를 입력받으세요.
+  // 세정수 중에서 가장 큰수만 출력
+  // 두개의 숫가자가 같은 숫자라면 그래도 큰 숫자 출력
+  // 단, 세개의 정수가 모두 같은 숫자라면 모두 같다라고 출력
+  // var int1 = parseInt( prompt("정수1") );
+  // var int2 = parseInt( prompt("정수2") );
+  // var int3 = parseInt( prompt("정수3") );
+  // var temp1; var temp2; var res; var card;
+
+  // res   = ( int1 >= int2 ) ? int1 : int2;
+  // temp1 = ( int1 == int2 ) ? 1 : 0;
+  // temp2 = ( int3 == res  ) ? 1 : 0;
+  // res   = ( int3 >= res  ) ? int3 : res;
+  
+  // card = ( temp1*temp2 ) ? "세개의 정수가 모두 같다" : "세개의 정수가 모두 같지 않다"
+  // console.log("가장 큰 값 : "+ res);
+  // console.log(card);
+
+
+
+
+
+
+
+</script>
+
+</head>
+<body>
+  
+</body>
+</html>

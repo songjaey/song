@@ -1,0 +1,80 @@
+<!--javascript_시작.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript"> 
+    //한줄 주석
+    /*
+      여러줄 주석
+      javascript를 배우고 사용하기 위해서는 html,css 기초지식이 필요하다.
+      html - 화면 표시
+      css - html 태그의 모양, 애니메이션
+      javascript - 웹 페이지의 복잡한 기능 구현, 
+                   지도, 애니메이션, 2D/3D 등등 동적인 페이지로 만들 수 있다.
+
+      html 태그 -> 요소, element
+      데이터 - 숫자 데이터, 문자 데이터
+      문자열 - 글자조각, 한글자, 단어 또는 문장, 단락 등
+
+      javascropt 이것만은 꼭!!
+      변수, 데이터 종류, 제어문(조건문, 반복문), 함수
+
+      변수 - 데이터를 저장하기 위한 메모리 공간
+      컴퓨터에서 데이터가 사용되기 위해서는 저장(기억)이 되어야 한다.
+      데이터를 저장하기 위한 첫번째 저장공간은 변수이다.
+      데이터에는 숫자(정수, 실수) 데이터, 문자데이터가 있다.  
+
+    */
+    // 자바 스크립트 변수 생성 방법
+    // 변수의 이름 정하기!! - 
+    // 숫자 데이터 저장하기 위한 변수
+    // num(number)
+
+    // var num = 10; 
+    // age = 20;
+
+
+    /* 브라우저에 데이터 출력하는 방법 1.
+       html문서에 데이터를 출력하기
+    */
+    // 현재 문서에 ()안의 내용을 표시하라
+
+    // 변수에 저장하지 않고 사용한 데이터는 한번만 사용이 가능하다.
+    // 변수를 만들어 사용하는 이유는 해당 데이터를 재사용, 변경, 계산하기 위함이다.
+    // 변수에 저장한 데이터를 다른 데이터로 변경 가능하다.
+
+    // document.write('계산'+"<br>"); 
+    // num = prompt();
+    // document.write(num);
+    // num = num + 1;
+    // num = num + 2;
+    // num = num + 3; 
+    // document.write("<br>");
+    // document.writeln(num); 
+
+    // name = prompt();
+    // document.write("<br>");
+    // document.write("나는 " + name + " 입니다.");
+    
+    // 변수 생성 시 변수의 사용 범위를 지정해주는 게 좋다.
+    // const 상수를 의미
+    // var, let 은 변수의 재사용, 재생성이 다르다.
+    // var 는 변수의 재사용과 재생성이 가능하다.
+    // let 는 변수의 재사용은 가능하지만 재생성이 불가능하다.
+    // const는 재사용과 재생성이 불가능하다.
+    
+    var age = parseInt( prompt("만 나이를 입력하세요!") );
+
+    document.writeln( age );
+    document.writeln( age + 10 );
+    document.writeln("내 나이는 " + age + " 살이다.");
+    document.writeln("태어난 년도는" + (2023-age) + "년도이다. <br>");
+  </script>
+</head>
+<body>
+
+</body>
+</html>

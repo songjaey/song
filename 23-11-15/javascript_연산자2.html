@@ -1,0 +1,118 @@
+<!-- javascript_연산자2.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>논리연산자</title>
+  <script>
+    // 논리 연산자
+    // and(&&), or(||), not(!)
+    // ( a > 50 ) && ( b < 10 ) && ( c < 20 ) || ( d > 40 );
+
+    // 세개의 정수 중 큰 수를 출력, 세 개가 모두 같으면 같다 출력
+    // var num1 = parseInt( prompt("정수1") );
+    // var num2 = parseInt( prompt("정수2") );
+    // var num3 = parseInt( prompt("정수3") );
+  
+    // var res  = (num1 > num2) ? num1 : num2;
+    // res = ( res > num3 ) ? res : num3;
+    // res = ( num1 == num2 && num1 == num3 ) ? "모두 같다" : "큰수 :" + res ;
+    // console.log(res);
+
+    // 심부름으로 소금, 고추장으로 사오라고 했다면
+    // 심부름을 잘 마치려면 소금하고 고추장을 사와야 한다.
+    // 소금하고(그리고) 고추장
+
+    // or연산자는 여러개의 조건을 사용해서 만들어야하는 경우에 조건 사이사이에 
+    // 또는을 넣어서 표현했을 때 자연스러워야 한다.
+    // 심부름으로 간장이나 액젓을 사오라고 했다면
+    //  간장 또는 액젓 둘중에 하나만 사가면 된다.
+
+    // 야바위 만들기
+    // 종이컵이 세개가 있다. 세개의 종이컵 중 한군데에만 주사위가 들어있다.
+    // 주사위가 들어있는 종이컵을 맞추면 2배
+    // 주사위 위치도 맞추고 주사위 값도 맞추면 6배
+    // 주사위는 사면체이다.
+
+    // var dealer = parseInt( Math.random() * 3 ) + 1;
+    // var dice   = parseInt( Math.random() * 4 ) + 1;
+    
+    // var user_cup  = parseInt( prompt("몇번째 종이컵 선택") );
+    // var user_dice = parseInt( prompt("주사위 값은?") );
+    // var result = ( dealer == user_cup && dice == user_dice ) ? "6배" : ( dealer == user_cup ) ? "2배" : "꽝";
+
+    // 가위 바위 보!!
+    // 1. 가위 2. 바위 3. 보
+
+    // var com   = parseInt( Math.random()*3 ) + 1;
+    // var user  = parseInt( prompt("1.가위 2.바위 3.보") );
+    // var result= (com == user) ? "비김" : 
+    //             (com ==1 && user == 2) || (com == 2 && user == 3) || (com == 3 && user == 1) ? "이김" : "패배";
+    // console.log( result );
+
+    // var cl = user - com;
+    // var result = ( cl == 0 ) ? "비김" :
+    //              ( cl == 1 || cl == -2 ) ? "이김" : "패배";
+    // console.log( result );
+
+    // document.write("<div class = red> </div>")
+    // 문자열 비교하기는 a === "사각형"
+    // 1. 사각형의 색상을 입력하세요. (빨강,노랑 파랑)
+    // 2. 크기를 입력하세요 ( 1, 2, 3 ) 숫자로 처리  1 - 100,100  / 2 - 200,200 / 3- 300,300;
+    // var colorInput = prompt("색상 입력");
+    // var sizeInput  = parseInt(prompt("크기를 입력"));
+    // "<div class = red1> </div>"
+    // var color = ( sizeInput == 1 && colorInput ==="빨강" ) ? "<div class = red1> </div>" : 
+    //             ( sizeInput == 2 && colorInput ==="빨강") ? "<div class = red2> </div>" : 
+    //             ( sizeInput == 3 && colorInput ==="빨강") ? "<div class = red3> </div>" : 
+    //             ( sizeInput == 1 && colorInput ==="노랑" ) ? "<div class = yellow1> </div>" : 
+    //             ( sizeInput == 2 && colorInput ==="노랑") ? "<div class = yellow2> </div>" : 
+    //             ( sizeInput == 3 && colorInput ==="노랑") ? "<div class = yellow3> </div>" : 
+    //             ( sizeInput == 1 && colorInput ==="파랑") ? "<div class = blue1> </div>" : 
+    //             ( sizeInput == 2 && colorInput ==="파랑") ? "<div class = blue2> </div>" : "<div class = blue3> </div>"; 
+
+    // document.write(color);
+
+    // 두 개의 정수를 입력받아 가장 작은 숫자만 출력
+    // var num1 = parseInt( prompt("정수1") );
+    // var num2 = parseInt( prompt("정수2") );
+    // if(num1 >= num2){
+    //   document.write(num2);
+    // }
+    // else{
+    //   document.write(num1);
+    // }
+
+    // prompt("다음 추가 등록을 하시겠습니까?(y/n)")
+    var selec = prompt("다음 추가 등록을 하시겠습니까");
+    if( selec === "y" || selec === "Y" ){
+      document.write("추가등록을 시작합니다")
+    }
+    else if( selec === "n" || selec === "N" ){
+      document.write("등록을 종료합니다")
+    }
+    
+
+
+    </script>
+    <style>
+      
+      /* div{ width:100px; height:100px; } */
+
+      /* .red1{background: red;width:100px; height:100px; }
+      .red2{background: red;width:200px; height:200px; }
+      .red3{background: red;width:200px; height:300px; }
+      .yellow1{background: yellow;width:100px; height:100px;}
+      .yellow2{background: yellow;width:200px; height:200px;}
+      .yellow3{background: yellow;width:300px; height:300px;}
+      .blue1{background: blue;width:100px; height:100px;}
+      .blue2{background: blue;width:200px; height:200px;}
+      .blue3{background: blue;width:300px; height:300px;} */
+      
+    </style>
+</head>
+<body>
+  
+</body>
+</html>
