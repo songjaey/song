@@ -35,7 +35,6 @@ window.onload = function(){
       price = cost;
     }
   }
-
   alert("결과는 : " + price );
 
 }
