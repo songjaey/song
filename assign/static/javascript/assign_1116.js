@@ -12,8 +12,8 @@
 
 window.onload = function(){
 
-  var cost = 1000;
   var time = parseInt( prompt("주차시간") );
+  var cost = 1000;
   var price;
   if(time >= 480){
     cost = 10000;
