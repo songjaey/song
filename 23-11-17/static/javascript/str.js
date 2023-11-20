@@ -135,18 +135,18 @@
 // //
 
 
-let info = "이순신: 군인,34세,아산 - 장보고:군인,41세,완도 - 김춘추:정치인,28세,경주";
-let data = info.split(" - ");
-// 출력 - 이름 직업
-var lee_name = data[0].substring(0,data[0].indexOf(":"));// data[0].split(":");
-var lee_job  = data[0].substring(data[0].indexOf(":") + 1, data[0].indexOf(","));
-lee_name = data[0].split(":")
-console.log(lee_name[0]);
+// let info = "이순신: 군인,34세,아산 - 장보고:군인,41세,완도 - 김춘추:정치인,28세,경주";
+// let data = info.split(" - ");
+// // 출력 - 이름 직업
+// var lee_name = data[0].substring(0,data[0].indexOf(":"));// data[0].split(":");
+// var lee_job  = data[0].substring(data[0].indexOf(":") + 1, data[0].indexOf(","));
+// lee_name = data[0].split(":")
+// console.log(lee_name[0]);
 
-// 장보고의 나이는 몇인가? 출력
-var jang_age = data[1].substring(data[1].indexOf(",") + 1,data[1].indexOf("세"));
-var jang   = data[1].split(":");
-var jang_t = jang[1].split(",");
+// // 장보고의 나이는 몇인가? 출력
+// var jang_age = data[1].substring(data[1].indexOf(",") + 1,data[1].indexOf("세"));
+// var jang   = data[1].split(":");
+// var jang_t = jang[1].split(",");
 
-console.log( parseInt( jang_t[1]) );
+// console.log( parseInt( jang_t[1]) );
 

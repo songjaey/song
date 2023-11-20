@@ -1,0 +1,47 @@
+<!-- assign -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  var max = 50; var min = 1; var diff = max - min + 1; var num=1; 
+  var user = parseInt(prompt("정수를 입력(1~50)"));
+  var com = Math.floor( Math.random()* diff ) + min; // 1~50;\
+  for(;true;){
+    if( com > user ){ 
+      document.write("결과는 "+ com +" 다운 <br>");
+      max  = com - 1;
+      diff = com - min; 
+      com = Math.floor( Math.random()* diff ) + min; 
+      num++;
+    }
+    else if( com < user){
+      document.write("결과는 "+com+" 업 <br>");
+      min  = com + 1; 
+      diff = max - com;
+      com  = Math.floor( Math.random()* diff ) + min; 
+      num++;
+    }
+    else{
+      document.write("결과: "+ com + " 총 :"+num +"회");
+      break;
+    }
+  }
+
+  // var word = "international prototype";
+  // // 지정한 알파벳의 개수가 몇개인지 구하기.
+  // var alp  = "o"; var num = 0;
+  // for(var i=0; i < word.length; i++){
+  //   if( word.charAt(i) === alp ) 
+  //     num++;
+  // }
+
+
+</script>
+<body>
+  
+</body>
+</html>
