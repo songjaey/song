@@ -1,0 +1,49 @@
+<!-- scipt_io.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous">
+  </script>
+  <script>
+    window.onload = function(){ // ->jquery식 $(function)(){    }
+      var nameTag = document.getElementById("name");
+      alert(nameTag.value);
+    }
+
+    function enroll(){
+      // var nameTag = document.getElementById("name");  // $("#name")
+      // //document.write(nameTag.value);
+      // var res = document.getElementById("result");
+      // //res.innerHTML = nameTag.value; // 다 날리고 다시 쓴다. 기존 내용 유지 못함.
+      // res.innerText = "<h1>" + nameTag.value + "</h1>"; // html tag가 적용이 안된다.
+      
+      // jquery 태그 선택방법 - $("아이디"), $(".클래스")
+      // document.getElementById("name").value 를 jquery로 변경하면 -> $("#name").val"()
+      //$("#result").text( $("#name").val() );
+
+      var birth = $("#name").val(); // id가 name인 input태그의 입력값
+      var age   = 2023 - Number( birth.substring(0,4) );
+      $("#result").text( age + "살" );
+    }
+    
+    
+
+
+  </script>
+</head>
+<body>
+
+  <input type = "text" id = "name" value=""><br>
+  <button onclick="enroll()">입력</button>
+  <!-- <input type = "number"><br>
+  <input type = "date"><br>
+  <input type = "password"><br> -->
+  <div id = "result"></div>
+</body>
+</html>

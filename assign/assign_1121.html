@@ -1,0 +1,45 @@
+<!--assign_1121.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+    과제. 인구조사
+    가족구성원의 나이를 입력하기 prompt로 입력
+    0을 입력하면 더이상 입력 처리가 안된다.
+    노인 65세 이상, 성인 20~64, 청소년 8~19, 아동 1~7세
+    */
+    var age, tot = 0, old = 0, adu = 0, teen = 0, kid = 0;
+    var flag = true;
+    while(flag){
+      age = parseInt(prompt("나이 입력"));
+      if( age >= 65 ){
+        tot++; old++;
+      }
+      else if( age>=20 && age<=64){
+        tot++; adu++;
+      }
+      else if( age>=8 && age<=19){
+        tot++; teen++;
+      }
+      else if( age>=1 && age<=7){
+        tot++; kid++;
+      }
+      else if( age == 0 ){
+        document.write(`총원 ${tot}명 : 노인 ${old}명, 성인 ${adu}명, 청소년 ${teen}명, 아동 ${kid}명`);
+        break;
+      }
+      else{
+        alert("잘못 입력");
+      }
+    }
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

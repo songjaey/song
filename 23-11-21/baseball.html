@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+
+    do {
+          var com1 = Math.floor(Math.random()*9)+1;
+          var com2 = Math.floor(Math.random()*9)+1;
+          var com3 = Math.floor(Math.random()*9)+1;
+        }
+        while(com1==com2 || com2==com3 || com3==com1);
+        function find(){
+
+        var num1 = Number($("#num1").val());
+        var num2 = Number($("#num2").val());
+        var num3 = Number($("#num3").val());
+        
+        $("#result4").html(`${com1}`)
+        $("#result5").html(`${com2}`)
+        $("#result6").html(`${com3}`)
+        
+        while(!(num1>=1 && num1<=9) && !(num2>=1 && num2<=9) && !(num3>=1 && num3<=9)){
+            alert("다시입력하시오")
+            break;
+        }
+            var st = 0;
+            var ball = 0;
+            var ot = 0;
+            var ok = 0;
+            var check1 = true;
+            var check2 = true;
+            var check3 = true;
+            /*스트라이크 변수*/
+            while(true){
+            //if(check1)
+                {
+                    if(num1==com1){$("#result1").html(`입력값 : ${com1} 스트라이크 : ${++st}`); check1 = false;}
+                    else if(num1 == com2 || num1 == com3){$("#result1").html(`입력값 : ${num1} 볼 : ${++ball}`);}
+                    else{$("#result1").html(`입력값 : ${num1} 아웃 :${++ot}`);}
+                }
+            //if(check2)
+                {
+                    if(num2==com2){$("#result2").html(`입력값 : ${com2} 스트라이크 : ${++st}`); check2 = false;}
+                    else if(num2 == com1 || num2 == com3){$("#result2").html(`입력값 : ${num2} 볼 : ${++ball}`);}
+                    else{$("#result2").html(`입력값 : ${num2} 아웃 : ${++ot}`);}
+                }
+            //if(check3)
+                {
+                    if(num3==com3){$("#result3").html(`입력값 : ${com3} 스트라이크 : ${++st}`); check3 = false;}
+                    else if(num3 == com2 || num3 == com1){$("#result3").html(`입력값 : ${num3} 볼 : ${++ball}`);}
+                    else{$("#result3").html(`입력값 : ${num3} 아웃 : ${++ot}`);}
+                }
+            if(st == 3)
+                {
+                    $("#result1").html(`정답`);
+                    $("#result2").html(`정답`);
+                    $("#result3").html(`정답`);
+                    break;
+                }
+                num1 = Number($("#num1").val());
+                num2 = Number($("#num2").val());
+                num3 = Number($("#num3").val());
+                break;
+            }
+        
+        
+        }
+    </script>
+    <style>
+        input{width:50px;}
+    </style>
+</head>
+<body>
+    <input type="text" id = "num1">
+    <input type="text" id = "num2">
+    <input type="text" id = "num3">
+    <button onclick="find()">실행</button>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <div id="result5"></div>
+    <div id="result6"></div>
+</body>
+</html>
