@@ -55,12 +55,12 @@ let avg_up_name = new Array();
 // 7명 선수들의 평균자책점의 평균치를 구하시오
 // 평균치 이상인 선수들이 누구인지 출력하세요
 
-for(var i=0; i < name.length; i++){
+for(var i = 0; i < name.length; i++){
   tot += era[i];  
 }
 avg = tot / name.length;
-for(var i=0; i < name.length; i++){
-  if( era[i] > avg )
+for(var i = 0; i < name.length; i++){
+  if( era[i] >= avg )
     avg_up.push( name[i] );
 }
 document.write("평균은 : " + avg + "<br>");
