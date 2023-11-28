@@ -1,0 +1,45 @@
+<!-- form_test.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="./static/javascript/form_test.js"></script>
+  <style>
+  .checkWrap{
+    position:relative;
+    width:300px
+  }
+  .listBox{
+    padding-left:50px;
+    position:relative; 
+    display:flex;
+    flex-direction: column;
+  }
+  #pass{
+    width:200px;
+
+  }
+  </style>
+</head>
+<body>
+  
+  <form method="get" action="pass.html">
+    <div class="checkWrap">
+      <div class="allBox">
+        <input type="checkBox" name="allchk" id="allchk">모두 동의
+      </div>
+      <div class="listBox">
+        <span><input type="checkbox" name="agr" class="agree" value="개인정보">개인정보활용</span>
+        <span><input type="checkbox" name="agr" class="agree" value="정보제공">정보제공</span>
+        <span><input type="checkbox" name="agr" class="agree" value="이벤트알림">이벤트알림</span>
+        <span><input type="checkbox" name="agr" class="agree" value="보험가입">보험가입</span>
+      </div>
+    </div><br><br>
+    <button type="button" id="pass">다음 진행</button>
+  </form>
+
+</body>
+</html>
