@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #circle1{
+            width:50px; height:50px;
+            background: red;
+            border-radius: 100%;
+            position:absolute;
+            top:200px;
+            left:200px;
+            animation: ball1 4s linear 4s 1 reverse;
+            /* animation : 이름 동작시간  속도  지연시간  횟수  방향 */
+        }
+        #circle2{
+            width:50px; height:50px;
+            background: orange;
+            border-radius: 100%;
+            position:absolute;
+            top:200px;
+            left:250px;
+           
+        }
+        #circle3{
+            width:50px; height:50px;
+            background: yellow;
+            border-radius: 100%;
+            position:absolute;
+            top:200px;
+            left:300px;
+          
+        }
+        #circle4{
+            width:50px; height:50px;
+            background: green;
+            border-radius: 100%;
+            position:absolute;
+            top:200px;
+            left:350px;
+           
+        }
+        #circle5{
+            width:50px; height:50px;
+            background: blue;
+            border-radius: 100%;
+            position:absolute;
+            top:200px;
+            left:400px;
+            animation: ball2 4s linear 1 reverse;
+            /* animation: ball 1s ease-in infinite alternate; */
+        }
+        @keyframes ball1{
+            0%{top:50px; left:50px;}
+            10%{top:76.0472px; left:52.2788px}
+            20%{top:101.303px;left:59.0461px;}
+            30%{top:125px;left:70.0962px;}
+            40%{top:146.418; left:85.0933;}
+            50%{top:164.907px; left:103.582px;}
+            60%{top:179.904px; left:125px;}
+            70%{top:190.954px; left:148.697px;}
+            80%{top:197.721px; left:173.953px;}
+            100%{top:200px; left:200px;}
+        }
+        @keyframes ball2{
+          100%{top:50px; left:550px;}
+            80%{top:76.04723px; left:547.7212px}
+            70%{top:101.303px;left:540.9539px;}
+            60%{top:125px;left:529.9038px;}
+            50%{top:146.418; left:514.9067;}
+            40%{top:164.907px; left:496.4181px;}
+            30%{top:179.904px; left:475px;}
+            20%{top:190.954px; left:451.303px;}
+            10%{top:197.721px; left:426.0472px;}
+            0%{top:200px; left:400px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="circle1"></div>
+    <div id="circle2"></div>
+    <div id="circle3"></div>
+    <div id="circle4"></div>
+    <div id="circle5"></div>
+</body>
+</html>
