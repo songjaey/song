@@ -1,0 +1,230 @@
+/* default.css */
+:root{
+  --main-bg-color:#222845; /* 전체 배경색 */
+  --font-color:#616060; /* 기본 텍스트 색상 */
+  --box-color:#747474; /* 컨텐츠 배경색 */
+  --bt-color:#2F9D27; /* 버튼 배경색 */
+  --menu-color:#8c8c8c; /* 메뉴 배경색 */
+  --menu-hover-color:#F2CB61; /* 메뉴 마우스오버 */
+  --font-size:1.2rem;
+  --title-size:2.5rem;
+  --content-size:1.5rem;
+  --sub-size:1.9rem;
+}
+*{
+  padding: 0;
+  margin : 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--main-bg-color);
+  font-size:var(--font-size);
+  color: var(--font-color);
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+span,b,u,strong{
+  display:inline-block;
+}
+table{
+  border-collapse:collapse; /* td와 td사이의 간격 제거 */
+  text-align: center;
+}
+input[type=text], input[type=password], input[type=email],
+input[type=number]{
+  padding:5px 10px;
+  outline: none;
+  border:0;
+  font-size: var(--content-size);
+  background:skyblue;
+}
+button, input[type=button], input[type=submit]{
+  border:0;
+  background-color: var(--bt-color);
+  font-size:var(--sub-size);
+  border-radius: 10px;
+}
+img{width:100%;}
+#wrap{
+  width:100%;
+  position:relative;
+}
+#top{
+  width:1200px;
+  padding:5px 20px;
+  margin:0 auto;
+}
+#top .topMenu{
+  width:100%;
+  display:flex;
+  justify-content:end;
+  font-size:.7rem;
+}
+#top .topMenu span:nth-child(2){
+  border-left:2px solid var(--font-color);
+  border-right:2px solid var(--font-color);
+}
+#top .topMenu span{
+  padding:0 15px;
+}
+#header{
+  width:100%;
+  border-top:2px solid #FFBB00;
+  border-bottom: solid var(--font-color);
+  padding:10px 0;
+}
+#header #nav{
+  width:1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header #nav .logo{
+  background-image:url("../images/naver-icon.png") ;
+  width:70px; height:70px;
+  background-size:contain;
+}
+#header #nav .menu{
+  width:900px;
+  position:relative;
+}
+#header #nav .menu .menuList{
+  width:100%;
+  position:relative;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  list-style-type:none;
+}
+.menuList .menuItem{
+  cursor:pointer;
+  position:relative;
+  padding:20px 5px;
+}
+.menuList .menuItem .subMenu{
+  display:none;
+  position:absolute;
+  top:80px;
+  width:130px;
+  font-size:1rem;
+  list-style-type:none;
+}
+.menuList .menuItem .subMenu .subItem{
+  line-height: 30px;
+}
+/* .menuList .menuItem .subMenu{
+  position:absolute;
+  width:130px;
+  font-size:1rem;
+  opacity : 0;
+}
+.menuList .menuItem .subMenu .subItem{
+  position:absolute;
+  line-height: 0px;
+  top:-10px;
+}
+.menuList .menuItem:hover .subMenu{
+  opacity: 1;
+}
+.menuList .menuItem:hover .subMenu .subItem{
+  line-height: 30px;
+  top:40px;
+  position:relative;
+} */
+
+#footer{
+  width:100%;
+  background:#383e5e;
+  padding:70px 0 50px 0;
+  text-align: center;
+}
+
+#searchWrap{
+  width:800px;
+  margin:0 auto;
+  padding:10px 0;
+  /* background: var(--box-color); */
+}
+#searchWrap .search{
+  width:100%;
+  margin:0 auto;
+  border-bottom:1px solid #bbb;
+}
+#searchWord{
+  width:90%;
+}
+#searchWord + label{
+  display:inline-block;
+  width:8%;
+  text-align:center;
+}
+#slideWrap{
+  width:100%;
+  background: var(--box-color);
+  height:500px;
+}
+#slideBox{
+  width:1200px;
+  margin: 0 auto;
+  position:relative;
+  /* height:500px; */
+}
+#slideBox .slide{
+  width:100%;
+  height:500px;
+  position:relative;
+  overflow:hidden;
+}
+#slideBox .slide .slideList{
+  display:flex;
+  height:100%;
+  width:calc(1200px * 4);
+  position:relative;
+  right:0px;
+  transition: right 2s ease;
+}
+#slideBox .slide .slideList .slideImg{
+  width:1200px;
+}
+#slideBox .leftBt{
+  position:absolute;
+  top:50%;
+  left:10px;
+  font-size:var(--title-size);
+  background:rgba(255,255,255,0.3);
+}
+#slideBox .rightBt{
+  position:absolute;
+  top:50%;
+  right:10px;
+  font-size:var(--title-size);
+  background:rgba(255,255,255,0.3);
+}
+
+
+
+#main{
+  width:1200px;
+  margin: 0 auto;
+  padding:50px 100px;
+}
+#main .gridTest{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-auto-rows: 400px;
+  gap:10px;
+}
+#main .gridTest .gridItem{
+  overflow:hidden;
+}
+.gridItem:nth-child(1){
+  grid-column: 1/2;
+  grid-row:1/3;
+}
+.gridItem:nth-child(4){
+  grid-column: 2/4;
+  grid-row:2/3;
+}

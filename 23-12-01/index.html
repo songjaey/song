@@ -1,0 +1,164 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프리덤</title>
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script src="./static/javascript/index.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./static/css/default.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/naver-icon.png">
+  <!-- <script src="./static/javascript/index.js">  -->
+  </script>
+  <script>
+  let slide_idx =0;
+  $(function(){
+    $(".menuList>.menuItem").on("mouseover", function(){
+        $(this).children(".subMenu").show();
+    });
+
+    $(".menuList>.menuItem").on("mouseout", function(){
+      $(this).children(".subMenu").slideUp();
+    })
+
+    //슬라이드 이미지 구현
+    $(".leftBt").on("click",function(){
+      if(slide_idx != $(".slideImg").length-1 ){
+        slide_idx++;
+        $(".slideList").css("right",(slide_idx * 1200) + "px");
+      }
+    });
+    $(".rightBt").on("click",function(){
+      if(slide_idx!=0){
+        slide_idx--;
+        $(".slideList").css("right",(slide_idx * 1200) + "px");
+      }      
+    });
+
+    // 자동 슬라이드 이미지
+    // 시간을 제어
+    // setTimeout  - 지정한 시간 이후 단 한 번 동작, 
+    // setInterval - 지정한 시간 간격으로 동작
+    // setInterval(실행할 내용(함수), 시간(밀리 세컨드) );
+    setInterval(
+      function(){
+          if(slide_idx != $(".slideImg").length-1 ){
+          slide_idx++;
+          $(".slideList").css("right",(slide_idx * 1200) + "px");
+        }
+        else{
+          slide_idx=0;
+        }
+      } , 6000
+    ); 
+  });
+
+  
+
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="top">
+      <div class="topMenu">
+        <span>
+          <a href="./signin.html">로그인</a>
+        </span>
+        <span>
+          <a href="./signup.html">회원가입</a>
+        </span>
+        <span>
+          <a href="">문의</a>
+        </span>
+      </div>
+    </div>
+    <div id="header">
+      <div id="nav">
+        <div class="logo" onclick="javascript:location.href='./index.html';"></div>
+        <div class="menu">
+          <ul class="menuList">
+            <li class="menuItem">
+              FreeDomLife
+              <ul class="subMenu">
+                <li class="subItem">
+                  <a href="./freetalk.html">나혼자산다</a> 
+                </li>
+                <li class="subItem">혼밥</li>
+                <li class="subItem">혼술</li>
+              </ul>
+            </li>
+            <li class="menuItem">
+              Redemption
+              <ul class="subMenu">
+                <li class="subItem">연애와구속</li>
+                <li class="subItem">회사와억압</li>
+              </ul>
+            </li>
+            <li class="menuItem">
+              MyLife
+              <ul class="subMenu">
+                <li class="subItem">슬기로운사회생활</li>
+                <li class="subItem">행복한연애생활</li>
+                <li class="subItem">홀로서기</li>
+              </ul>
+            </li>
+            <li class="menuItem">LifeDiary</li>
+            <li class="menuItem">
+              MovieIs
+              <ul class="subMenu">
+                <li class="subItem">액션</li>
+                <li class="subItem">공포/스릴러</li>
+                <li class="subItem">코미디/드라마</li>
+                <li class="subItem">혼자본영화</li>
+              </ul>
+            </li>
+            <li class="menuItem">Customer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--index.html에서만-->
+    <div id="searchWrap">
+      <div class="search">
+        <input type="text" name="searchWord" id="searchWord">
+        <label><i class="bi bi-search-heart"></i></label>
+      </div>
+    </div>
+    <div id="slideWrap">
+      <div id="slideBox">
+        <div class="slide">
+          <ul class="slideList">
+            <li class="slideImg"><img src="./static/images/slide1.jpg" alt="1"></li>
+            <li class="slideImg"><img src="./static/images/slide2.jpg" alt="2"></li>
+            <li class="slideImg"><img src="./static/images/slide3.jpg" alt="3"></li>
+            <li class="slideImg"><img src="./static/images/slide4.jpg" alt="4"></li>
+          </ul>
+        </div>
+        <p class="leftBt"><span><i class="bi bi-arrow-left-square"></i></span></p>
+        <p class="rightBt"><span><i class="bi bi-arrow-right-square"></i></span></p>
+      </div>
+    </div>
+    <div id="main">
+      <div class="gridTest">
+        <div class="gridItem"><img src="https://loremflickr.com/400/820/dog?random=1"  alt="logo1">1</div>
+        <div class="gridItem"><img src="https://loremflickr.com/400/400/dog?random=2"  alt="logo2">2</div>
+        <div class="gridItem"><img src="https://loremflickr.com/400/400/dog?random=3"  alt="logo3">3</div>
+        <div class="gridItem"><img src="https://loremflickr.com/810/400/dog?random=4"  alt="logo4">4</div>
+      </div>
+    </div>
+
+
+    <div id="footer">
+      <h4>프리덤클럽 Corp.</h4>
+    </div>
+
+  </div>
+</body>
+</html>
