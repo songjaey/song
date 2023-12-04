@@ -1,147 +1,218 @@
+<!-- freetalk.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-  <script src="./static/javascript/index.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="./static/css/default.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="stylesheet" href="./static/css/freetalk.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--부트 스트랩-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+<!-- jquery-->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+<link rel="icon" href="./static/images/KR-logo.ico">
+<link rel="stylesheet" href="./static/css/default.css">
+<script src="./static/javascript/free.js"></script>
+<style>
+    #tableWrap{
+        width:900px;
+        height:700px;
+        margin:0 auto;
+        /* padding-left:200px; */
+    }
+    #tableSearch{
+        margin:50px auto;
+        background:#283053;
+        width:30%;
+        display:flex;
+    }
+    /* #searchContent{
+    
+    } */
+    #table{
+        margin:0 auto;
+        background: white;
+        color:black;
+        border: 1px solid black;
+    }
+    #tableSearch label{
+        margin-top:5px;
+        margin-left:20px;
+    }
+    th,td{
+        border: 1px solid black;
+    }
+    .row{
+        height:50px;
+    }
+    .col1{
+        width:10%
+    }
+    .col2{
+        width:50%
+    }
+    .col3{
+        width:20%
+    }
+    .col4{
+        width:20%
+    }
+    .content2,.content4{
+        text-align:left;
+    }
+    .content3{
+      text-align:center;
+    }
+
+
+</style>
+
 </head>
 <body>
-  <div id="wrap">
-    <div id="top">
-      <div class="topMenu">
-        <span>로그인</span>
-        <span>회원가입</span>
-        <span>문의</span>
-      </div>
-    </div>
-    <div id="header">
-      <div id="nav">
-        <div class="logo" onclick="javascript:location.href='./index.html';"></div>
-        <div class="menu">
-          <ul class="menuList">
-            <li class="menuItem">
-              FreeDomLife
-              <ul class="subMenu">
-                <li cass="subItem">나혼자산다</li>
-                <li cass="subItem">혼밥</li>
-                <li cass="subItem">혼술</li>
-              </ul>
-            </li>
-            <li class="menuItem">
-              Redemption
-              <ul class="subMenu">
-                <li class="subItem">연애와구속</li>
-                <li class="subItem">회사와억압</li>
-              </ul>
-            </li>
-            <li class="menuItem">
-              MyLife
-              <ul class="subMenu">
-                <li class="subItem">슬기로운사회생활</li>
-                <li class="subItem">행복한연애생활</li>
-                <li class="subItem">홀로서기</li>
-              </ul>
-            </li>
-            <li class="menuItem">LifeDiary</li>
-            <li class="menuItem">
-              MovieIs
-              <ul class="subMenu">
-                <li class="subItem">액션</li>
-                <li class="subItem">공포/스릴러</li>
-                <li class="subItem">코미디/드라마</li>
-                <li class="subItem">혼자본영화</li>
-              </ul>
-            </li>
-            <li class="menuItem">Customer</li>
-          </ul>
+    
+    <div id="wrap">
+        <div id="top">
+            <div class="topMenu">
+                <span>
+                    <a href="./signin.html">로그인</a>
+                </span>
+                <span>
+                    <a href="./signup.html">회원가입</a>
+                </span>
+                <span>
+                    <a href="">문의</a>
+                </span>
+            </div>
         </div>
-      </div>
+        <div id="header">
+            <div id="nav">
+                <div class="logo" onclick="javascript:location.href='./index.html';"></div>
+                <div class="menu">
+                    <ul class="menuList">
+                        <li class="menuItem">
+                            FreeDomLife
+                            <ul class="subMenu">
+                                <li class="subItem">
+                                    <a href="./freetalk.html">나혼자산다</a>
+                                </li>
+                                <li class="subItem">혼밥</li>
+                                <li class="subItem">혼술</li>
+                            </ul>
+                        </li>
+                        <li class="menuItem">
+                            Redemption
+                            <ul class="subMenu">
+                                <li class="subItem">연애와 구속</li>
+                                <li class="subItem">회사와 억압</li>
+                            </ul>
+                        </li>
+                        <li class="menuItem">
+                            MyLife
+                            <ul class="subMenu">
+                                <li class="subItem">슬기로운사회생활</li>
+                                <li class="subItem">
+                                    행복한연애생활
+                                </li>
+                                <li class="subItem">홀로서기</li>
+                            </ul>
+                        </li>
+                        <li class="menuItem">LifeDiary</li>
+                        <li class="menuItem">
+                            MovieIs
+                            <ul class="subMenu">
+                                <li class="subItem">액션/SF</li>
+                                <li class="subItem">공포/스릴러</li>
+                                <li class="subItem">코미디/드라마</li>
+                                <li class="subItem">혼자본영화</li>
+                            </ul>
+                        </li>
+                        <li class="menuItem">Customer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="tableWrap">
+            <div id="tableSearch">
+                <input type="text" name="searchContent" id="searchContent" size=10>
+                <label><i class="bi bi-search-heart"></i></label>
+            </div>
+            <table id="table">
+                <tr class="board">
+                    <th class="col1">번호</th>
+                    <th class="col2">제목</th>
+                    <th class="col3">작성자</th>
+                    <th class="col4">작성일</th>
+                </tr>
+                <tbody class="detail">
+                    <tr class="row">
+                        <td class="content1">1</td>
+                        <td class="content2">이스라엘군 가자 남부공격 공식화...</td> 
+                        <td class="content3">송재영</td> 
+                        <td class="content4">2023-12-03</td>  
+                    </tr>
+                    <tr class="row">
+                        <td class="content1">2</td>
+                        <td class="content2">10g 당 얼마지? 금가격 상승</td> 
+                        <td class="content3">송재영</td> 
+                        <td class="content4">2023-12-03</td>  
+                    </tr>
+                    <tr class="row">
+                        <td class="content1">3</td>
+                        <td class="content2">5인미만 사업장 통보되자...</td> 
+                        <td class="content3">송재영</td> 
+                        <td class="content4">2023-12-03</td>  
+                    </tr>
+                    <tr class="row">
+                        <td class="content1">4</td>
+                        <td class="content2">전세사기 가중처벌 공중협박죄..</td> 
+                        <td class="content3">송재영</td> 
+                        <td class="content4">2023-12-03</td>   
+                    </tr>
+                    <tr class="row">
+                        <td class="content1">5</td>
+                        <td class="content2">3세대 실손보험 손해율 156.6% 비상..</td> 
+                        <td class="content3">송재영</td> 
+                        <td class="content4">2023-12-03</td>   
+                    </tr>
+                    <tr class="row">
+                        <td class="content1">6</td>
+                        <td class="content2">'흉기'피습 에펠탑 현장...</td> 
+                        <td class="content3">송재영</td> 
+                        <td class="content4">2023-12-03</td>   
+                    </tr>
+                    <tr class="row">
+                        <td class="content1">7</td>
+                        <td class="content2">토지임대부 분양주택, 10년 거주 후..</td> 
+                        <td class="content3">송재영</td> 
+                        <td class="content4">2023-12-03</td>   
+                    </tr>
+                    <tr class="row">
+                        <td class="content1">8</td>
+                        <td class="content2">'투명스크린 보보며 외국어 동시대화'</td> 
+                        <td class="content3">송재영</td> 
+                        <td class="content4">2023-12-03</td>   
+                    </tr>
+                    <tr class="row">
+                        <td class="content1">9</td>
+                        <td class="content2">온천 없는 신길온척역 이름 변경 말라</td> 
+                        <td class="content3">송재영</td> 
+                        <td class="content4">2023-12-04</td>  
+                    </tr>
+                    <tr class="row">
+                        <td class="content1">10</td>
+                        <td class="content2">무고한 팔주민 너무 많이 죽어</td> 
+                        <td class="content3">송재영</td> 
+                        <td class="content4">2023-12-04</td>  
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="footer">
+            <h4>프리덤클럽 Corp.</h4>
+        </div>
     </div>
-
-    <div id="tableWrap">
-      <div id="tableSearch"></div>
-      <div id="table">
-        <tr class="row"> 
-          <td class="content">번호</td>
-          <td class="content">제목</td>
-          <td class="content">작성자</td>
-          <td class="content">작성일</td>
-        </tr>
-        <tr class="row"> 
-          <td class="content">번호</td>
-          <td class="content">제목</td>
-          <td class="content">작성자</td>
-          <td class="content">작성일</td>
-        </tr>
-        <tr class="row"> 
-          <td class="content">번호</td>
-          <td class="content">제목</td>
-          <td class="content">작성자</td>
-          <td class="content">작성일</td>
-        </tr>
-        <tr class="row"> 
-          <td class="content">번호</td>
-          <td class="content">제목</td>
-          <td class="content">작성자</td>
-          <td class="content">작성일</td>
-        </tr>
-        <tr class="row"> 
-          <td class="content">번호</td>
-          <td class="content">제목</td>
-          <td class="content">작성자</td>
-          <td class="content">작성일</td>
-        </tr>
-        <tr class="row"> 
-          <td class="content">번호</td>
-          <td class="content">제목</td>
-          <td class="content">작성자</td>
-          <td class="content">작성일</td>
-        </tr>
-        <tr class="row"> 
-          <td class="content">번호</td>
-          <td class="content">제목</td>
-          <td class="content">작성자</td>
-          <td class="content">작성일</td>
-        </tr>
-        <tr class="row"> 
-          <td class="content">번호</td>
-          <td class="content">제목</td>
-          <td class="content">작성자</td>
-          <td class="content">작성일</td>
-        </tr>
-        <tr class="row"> 
-          <td class="content">번호</td>
-          <td class="content">제목</td>
-          <td class="content">작성자</td>
-          <td class="content">작성일</td>
-        </tr>
-        <tr class="row"> 
-          <td class="content">번호</td>
-          <td class="content">제목</td>
-          <td class="content">작성자</td>
-          <td class="content">작성일</td>
-        </tr>
-        <tr class="row"> 
-          <td class="content">번호</td>
-          <td class="content">제목</td>
-          <td class="content">작성자</td>
-          <td class="content">작성일</td>
-        </tr>
-
-      </div>
-    </div>
-
-
-
-    <div id="footer">
-      <h4>프리덤클럽 Corp.</h4>
-    </div>
-  </div>
 </body>
 </html>

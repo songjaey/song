@@ -1,0 +1,82 @@
+<!--function1.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+  // function - 함수(독립적으로 기능을 실행), 메서드(종속 되어있는 기능을 가진 함수)
+  // b 밑에 c라는 메서드가 존재한다면,
+  // b를 프로그램 실행과 함께 같이 실행해주면 c메서드도 함께 램에 로드된다.
+  // a라는 함수는 자신이 실행 될 때만 로드된다.
+  // c라는 메서드를 실행하려면 b가 필요하다. b를 미리 로드 시켜주면 a함수보다 더욱 빠르게 실행이 가능하다.
+  // 다만 ,b가 반드시 존재해야지만 실행 할 수 있다.
+
+  // 함수 - 재사용, 수정, 모듈화
+  // 함수를 사용하는 이뉴는 개발자 편의를 위해
+
+//함수의 4가지 형태
+//function 함수이름( 입력변수(매개변수 또는 인자) ) { 함수내용; 반환값 (return) }
+//매개변수 -함수가 실행되기 위해 반드시 필요한 값을 저장하는 변수 - 입력값
+//반환값(return) - 함수가 실행이 되서 나온 결과값
+// function a(){
+//   var i=1;
+//   var j=2;
+//   var res=i+j;
+//   return res;  
+// }
+let result = 0;
+var average = 0;
+let ggres = new Array();
+function plus(num1, num2, num3){ // 함수 정의
+  result = num1 + num2 + num3;
+}
+function prints(){
+  document.getElementById("res").innerHTML = result;
+}
+function dan(num){
+  for(var i=1; i<=num; i++){
+    for(var j=1; j<=9; j++){
+      var k = i * j;
+      ggres += k;
+      ggres += " ";
+    }
+    ggres +="<br>";
+    //document.getElementById("gugudan").innerHTML = " ";
+  }
+  document.getElementById("gugudan").innerHTML = ggres;
+  //$("#gugudan").val(ggres); 
+}
+$(function(){ // html 문서가 브라우저에 모두 로드되면
+  
+});
+function avg(){
+  var i = parseInt( document.getElementById("num1").value);
+  var j = parseInt( document.getElementById("num2").value);
+  var k = parseInt( document.getElementById("num3").value);
+  average = ((i+j+k)/3);
+  //alert(average);
+}
+
+
+
+</script>
+</head>
+<body>
+  
+  <button onclick="plus(10,20,40)">함수 실행</button>
+  <button onclick="prints()">결과 출력</button>
+  <div id="res"></div> <br>
+  <input type="text" id="num1">
+  <input type="text" id="num2">
+  <input type="text" id="num3"><br>
+  <button onclick="avg()">성적 평균</button>
+  <br><br>
+  <!-- input#gugu -->
+  <input type="text" id="gugu">
+  <button onclick="dan(5)">구구단 출력</button>
+  <div id="gugudan"></div>
+</body>
+</html>

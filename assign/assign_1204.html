@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <title>Document</title>
+<script>
+  function blood(){
+    var b = parseInt( $("#bloodinput").val() );
+    bloodres(b);
+  }
+  function bloodres(tmp){
+    let res = new Array();
+    if(tmp>=70 && tmp<=100){
+      res += "공복혈당  ";
+    }else if(tmp<(70*0.943)){
+        res += "당화혈색소 ";
+    }
+    
+    if(tmp>=90 && tmp<=140){
+      res += "식후2시간혈당  ";
+    }
+    else if(tmp<(90*0.943)){
+      res += "당화혈색소 ";
+    }
+    else{
+      alert("비정상");
+    }
+   document.getElementById("res1").innerHTML = res;
+  }
+  function BodyCond(){
+    var height = parseInt( $("#height").val() );
+    var weight = parseInt( $("#weight").val() );
+    var BMI = weight / ((height/100)*(height/100));
+    if(BMI<=18.5){
+      document.getElementById("res2").innerHTML = "저체중";
+      //$("#res2").val("저체중");
+    }
+    else if(BMI>18.5 && BMI<=22.9){
+      document.getElementById("res2").innerHTML = "정상";
+    }
+    else if(BMI>=23.0 && BMI<=24.9){
+      document.getElementById("res2").innerHTML = "과체중";
+    }
+    else{
+      document.getElementById("res2").innerHTML = "비만";
+    }
+  }
+
+
+</script>
+</head>
+<body>
+ <button>혈당입력</button><input type="number" id="bloodinput"><br>
+ <button onclick="blood()">혈당계산</button> 
+ <div id="res1"></div> <br><br>
+
+ <button>키</button><input type="number" id="height">
+ <button>몸무게</button><input type="number" id="weight"><br>
+ <button onclick="BodyCond()">비만도계산</button>
+ <div id="res2"></div> 
+</body>
+</html>
