@@ -1,12 +1,21 @@
 
 //var com = Math.floor(Math.random()*3)+1;
 $(function(){
+  var scis = document.getElementById("scissors");
+  var rock = document.getElementById("rock");
+  var paper = document.getElementById("paper");
   var myImage = document.getElementById("mainImage");
   var imageArray = ["paper.png", "rock.png", "scissors.png"];
   var idx = 0;
   let interval = setInterval(changeImage,300);
+
    function changeImage(){
       myImage.setAttribute("src", imageArray[idx]);
+
+
+
+
+      
       idx++;
       if(idx>=3) idx = 0;
     }
@@ -15,10 +24,7 @@ $(function(){
 
     
     //var user = parseInt(prompt("1.가위  2.바위  3.보"));
-    idx--;
-    var scis = document.getElementById("scissors");
-    var rock = document.getElementById("rock");
-    var paper = document.getElementById("paper");
+    
     if(imageArray[idx] ==="paper.png") com = 3;
     else if(imageArray[idx] ==="rock.png") com = 2;
     else com = 1;
