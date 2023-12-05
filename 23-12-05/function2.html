@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <script>
+    $(function(){
+      $(".house").on("dblclick",update);
+    });
+
+    function update(){
+      var td = $(this);
+      
+      
+      var bt="<button class='modify'>수정</button>";
+      var htmlTag=makeHtml(td);
+      
+      td.html( htmlTag + bt);
+
+      $(".modify").on("click", function(){
+        save(td);
+      });
+
+      
+      //td.off("click");
+    }
+    function makeHtml(td){
+      var td_text = td.text();
+      var type="text";
+      if(td.hasClass("payment")){
+        let pay = ["카카오체크카드","국민체크카드","현대카드","우리체크카드"];
+        htmlTag=`<select id='pay'>`;
+        for ( var card of pay){
+          htmlTag +=`<option value='${card}' ${td_text===card? 'selected':''}>${card}</option>`;
+        }
+        htmlTag +=`</select>`; 
+      }
+      else{
+        if( td.hasClass("date") ){
+        type="date";
+        td_text = changeDate(td_text);
+        // td_text = "2023-"+td_text(".")[0]+"-"+td_text(".")[1]
+      }
+        htmlTag = `<input type='${type}' value='${td_text}'>`;
+      }
+      return htmlTag;
+    }
+    function save(t){
+      var tag = t.hasClass("payment") ? "select" :"input";
+      var text = t.children(tag).val();
+      if( t.hasClass("date") ){
+        text = changeDate(text);
+        //text = Number(text.split("-")[1]) + "." + Number(text.split("-")[2]);
+        
+      }
+      
+      t.text(text);
+      //t.on("click",update);
+    }
+    function changeDate(date){
+      if(date.includes("-")){
+        return Number(date.split("-")[1])+"."+Number(date.split("-")[2]);
+      }else{
+        let month = date.split(".")[0];
+        let day = date.split(".")[1];
+        digits(month); digits(day);
+        return "2023-"+month+"-"+day;
+      }
+    }
+
+    function digits(num){
+      if(num.length == 1)
+        num = "0" + num;
+      return num;
+    }
+
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>일</th>
+          <th>내역</th>
+          <th>지출</th>
+          <th>결제방법</th>
+        </tr>
+      </thead>
+      <tobdy>
+        <tr>
+          <td class="house date">12.1</td>
+          <td class="house detail">편의점(음료)</td>
+          <td class="house expense">2300</td>
+          <td class="house payment">카카오체크카드</td>
+        </tr>
+        <tr>
+          <td class="house date">12.4</td>
+          <td class="house detail">돈가스</td>
+          <td class="house expense">7000</td>
+          <td class="house payment">우리체크카드</td>
+        </tr>
+        <tr>
+          <td class="house date">12.5</td>
+          <td class="house detail">커피</td>
+          <td class="house expense">3000</td>
+          <td class="house payment">우리체크카드</td>
+        </tr>
+      </tobdy>
+    </table>
+  </div>
+</body>
+</html>
