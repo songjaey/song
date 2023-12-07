@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<script>
+  function dog(품종,크기,특징){
+    this.품종 = 품종;
+    this.크기 = 크기;
+    this.특징 = 특징
+  }
+  dog.prototype.view=function(){
+    document.write( this.품종 + " "+ this.크기+" " +this.특징);
+  }
+  dog.prototype.종 = 개;
+  
+  var d1 = new dog("말티즈","소형","장난끼");
+  var d2 = new dog("먹푸들","중형","똑똑이");
+  var d3 = new dog("진돗개","중형","순종");
+
+  d1.view();
+  console.log(d1);
+</script>
+</head>
+
+<body>
+  
+</body>
+</html>
