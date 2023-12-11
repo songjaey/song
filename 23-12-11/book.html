@@ -1,0 +1,37 @@
+<!--book.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<script>
+  window.onload=function(){
+    var query = location.search;
+    var url = location.href;
+    
+    query = query.substring(1);
+    query = query.split("&");
+    var title = query[0].split("=")[1];
+    var writer = query[1].split("=")[1];
+
+    title = decodeURI(title);
+    writer = decodeURI(writer);
+    
+    document.getElementById("list").innerHTML = `<div> 제목:${title}</div><div>저자:${writer}</div>`;
+    console.log(title);
+    console.log(query);
+    console.log(url);
+  }
+</script>
+</head>
+<body>
+  
+  <form method="get" action="booklist.html">
+    <input type="text" name="title" id="title" placeholder="책제목">
+    <input type="text" name="writer" id="writer" placeholder="저자">
+    <button>등록</button>
+  </form>
+
+</body>
+</html>

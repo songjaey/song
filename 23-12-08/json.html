@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+   
+
+<script>
+  // function 출력(std){
+  //   var out="";
+  //   var view = document.getElementById("view");
+
+  //   for( var i in std){
+  //     out+=`<div> 이름:${std[i].name}, 나이:${std[i].age}</div>`;
+  //   }
+  //   view.innerHTML = out;
+  // }
+
+
+  // var xmlHttp = new XMLHttpRequest();
+  // xmlHttp.onload = function(){
+  //   var student = JSON.parse(this.responseText);
+  //   출력(student);
+  //   //console.log(student);
+
+  //   //document.getElementById("name").innerText=student[0].name;
+  //   //document.getElementById("age").innerText=student[0].age;
+  //   //alert(student[0].name);
+  // }
+  // xmlHttp.open("GET","./data/student.json"); // 외부파일 열기 , open(전송방식, 주소)
+  // xmlHttp.send();
+
+</script>
+</head>
+<body>
+  <div id="view">
+    <div class="nameview">
+      이름: <div id="name"></div>
+    </div>
+    <div class="ageview">
+      나이: <div id="age"></div>
+    </div>
+  </div>
+</body>
+</html>
