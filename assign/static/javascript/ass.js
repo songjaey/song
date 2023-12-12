@@ -82,19 +82,19 @@ function make_bg(){
 
   //row2
   $(document).ready(function() {
-      $(".item19").append('<div class="bg3"></div><div class="row2">서울</div>');
+      $(".item19").append('<div class="bg3"></div><div class="row2">광주</div>');
   });
   $(document).ready(function() {
-      $('.item20').append('<div class="bg3"></div><div class="row2">서울</div>');
+      $('.item20').append('<div class="bg3"></div><div class="row2">순천</div>');
   });
   $(document).ready(function() {
-      $('.item21').append('<div class="bg3"></div><div class="row2">서울</div>');
+      $('.item21').append('<div class="bg3"></div><div class="row2">강릉</div>');
   });
   $(document).ready(function() {
-      $('.item22').append('<div class="bg3"></div><div class="row2">서울</div>');
+      $('.item22').append('<div class="bg3"></div><div class="row2">여수</div>');
   });
   $(document).ready(function() {
-      $('.item23').append('<div class="bg3"></div><div class="row2">서울</div>');
+      $('.item23').append('<div class="bg3"></div><div class="row2">양양</div>');
   });
 
   //col2
