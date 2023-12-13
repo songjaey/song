@@ -243,7 +243,7 @@ function fundpayment(gamer){
   $("#pm"+gamer.num).text(gamer.money+"만원");
 }
 function island(gamer){ //3턴 동안 탈출 불가
-
+  gamer.drift_turn = 3;
 }
 function complete(gamer){
 
